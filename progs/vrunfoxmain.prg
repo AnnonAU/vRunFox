@@ -1,4 +1,4 @@
-#INCLUDE		vRunFox.h
+#INCLUDE		.\classes\vRunFox.h
 LOCAL lcPath, loForm
 SET DELETED OFF
 SET EXCLUSIVE OFF
@@ -15,12 +15,12 @@ PRIVATE poCryptoA, poCryptoB
 poCryptoA = .NULL.
 poCryptoB = .NULL.
 
-loForm = NEWOBJECT("LoginForm", "classes\loginForm.vcx")
-loForm.Show()
+*loForm = NEWOBJECT("LoginForm", "classes\loginForm.vcx")
+*loForm.Show()
 
-IF loForm.cPW # TOP_SECRET
-	RETURN
-ENDIF
+*IF loForm.cPW # TOP_SECRET
+*	RETURN
+*ENDIF
 
 DO FORM vRunFox
 
